@@ -11,6 +11,7 @@ public class Lab3_GlobalAudio : MonoBehaviour
         {
             isMuted = !isMuted;
             AudioListener.volume = isMuted ? 0f : 1f;
+            Debug.Log(isMuted ? "Audio muted." : "Audio unmuted.");
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -19,11 +20,13 @@ public class Lab3_GlobalAudio : MonoBehaviour
             {
                 AudioListener.pause = true;
                 isPaused = true;
+                Debug.Log("Audio paused.");
             }
             else
             {
                 AudioListener.pause = false;
                 isPaused = false;
+                Debug.Log("Audio resumed.");
             }
         }
     }
